@@ -32,7 +32,6 @@ private:
 		}
 
 		listnode* volatile* listhead;
-		listnode* result;
 		listnode* current_node;
 		listnode* next_node;
 
