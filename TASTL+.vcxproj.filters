@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="TAspeedometer.h" />
+    <ClInclude Include="TAmempool.h">
+      <Filter>allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="TAvector.h">
+      <Filter>container\seq</Filter>
+    </ClInclude>
+    <ClInclude Include="TAstack.h">
+      <Filter>adapter\container adapter</Filter>
+    </ClInclude>
+    <ClInclude Include="TAqueue.h">
+      <Filter>adapter\container adapter</Filter>
+    </ClInclude>
+    <ClInclude Include="TAlist.h">
+      <Filter>container\seq</Filter>
+    </ClInclude>
+    <ClInclude Include="deque.h">
+      <Filter>container\seq</Filter>
+    </ClInclude>
+    <ClInclude Include="rbtree.h">
+      <Filter>container\link\rbtree_based</Filter>
+    </ClInclude>
+    <ClInclude Include="hashtable.h">
+      <Filter>container\link\hash_based</Filter>
+    </ClInclude>
+    <ClInclude Include="TAset.h">
+      <Filter>container\link\rbtree_based</Filter>
+    </ClInclude>
+    <ClInclude Include="TAmap.h">
+      <Filter>container\link\rbtree_based</Filter>
+    </ClInclude>
+    <ClInclude Include="TAhashset.h">
+      <Filter>container\link\hash_based</Filter>
+    </ClInclude>
+    <ClInclude Include="TAhashmap.h">
+      <Filter>container\link\hash_based</Filter>
+    </ClInclude>
+    <ClInclude Include="TAstring.h">
+      <Filter>container</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="container">
+      <UniqueIdentifier>{0706c970-6cd2-428c-8e3d-46c8845665d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="allocator">
+      <UniqueIdentifier>{b0fac91e-8c2b-44ca-98fc-45192d120b62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="iterator">
+      <UniqueIdentifier>{67756db2-78dd-4891-bda6-deb128b1ea1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="functor">
+      <UniqueIdentifier>{39cdac62-ba7c-4209-916d-69640deff242}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algorithm">
+      <UniqueIdentifier>{8003876c-1f9b-42f7-800e-473c003a4082}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="adapter">
+      <UniqueIdentifier>{1f651dbd-fb31-4326-96c0-36079199762f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="adapter\container adapter">
+      <UniqueIdentifier>{5b3c3536-235e-4f09-b35f-5ce0d41ed8a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="adapter\iterator adapter">
+      <UniqueIdentifier>{0e3333cb-b461-454c-9f3b-183ca67498de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="adapter\function adapter">
+      <UniqueIdentifier>{b6bdaf5a-84a4-478e-a9f0-97c30bba8ad9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="container\seq">
+      <UniqueIdentifier>{3eb2f6ef-8f5b-44f0-b1cc-290297164f2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="container\link">
+      <UniqueIdentifier>{98ce1e7a-9812-4c84-a3e8-20f6666aaa30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="container\link\rbtree_based">
+      <UniqueIdentifier>{33e7e9f3-7113-49c2-847d-d61012a90dc1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="container\link\hash_based">
+      <UniqueIdentifier>{9e0f009d-8754-44ab-a12d-fb623a2b438c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
