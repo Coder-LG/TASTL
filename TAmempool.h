@@ -92,7 +92,7 @@ private:
 			}
 
 			//从系统申请新的内存
-			start_free = (char*)std::malloc(bytes_to_get);
+			start_free = (char*)malloc(bytes_to_get);
 			end_free = start_free + bytes_to_get;
 			heap_size += bytes_to_get;
 
@@ -103,12 +103,12 @@ private:
 
 
 public:
-	static void* malloc(size_t n) {
+	static void* allocate(size_t n) {
 		listnode* volatile* listhead;
 		listnode* result;
 
 		if (n > (size_t)MAXSIZE) {
-			return std::malloc(n);
+			return malloc(n);
 		}
 		listhead = listheadarr + getlistindex(n);
 		result = *listhead;
@@ -119,12 +119,12 @@ public:
 		return result;
 	}
 
-	static void free(void *p,size_t n) {
+	static void deallocate(void *p,size_t n) {
 		listnode* q = (listnode*) p;
 		listnode* volatile* listhead;
 
 		if (n > (size_t)MAXSIZE) {
-			std::free(p);//为了不与本类中的free冲突
+			free(p);//为了不与本类中的free冲突
 			return;
 
 		}

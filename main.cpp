@@ -14,10 +14,10 @@ void mempooltest() {
 		for (int j = 1; j < 200; j++) {
 			for (int i = 0; i < 10000; i++) {
 				//cout << i<<" ";
-				x[i] = (int*)pool.malloc(sizeof(int));
+				x[i] = (int*)pool.allocate(sizeof(int));
 			}
 			for (int i = 0; i < 10000; i++) {
-				pool.free(x[i], sizeof(int));
+				pool.deallocate(x[i], sizeof(int));
 			}
 		}
 
