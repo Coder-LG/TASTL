@@ -1,14 +1,14 @@
 ﻿#include<iostream>
-#include"TAspeedometer.h"
-#include "TAmempool.h"
+#include"timer.h"
+#include "mempool.h"
 using namespace std;
-
+using namespace TA;
 void mempooltest() {
-	TAmempool pool;
+	mempool pool;
 	int** x;
 	int t = 0;
 	x = new int* [10000];
-	TAtimer timer;
+	timer timer;
 	for (int m = 0; m < 10; m++) {
 		timer.start();
 		for (int j = 1; j < 200; j++) {

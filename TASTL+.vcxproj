@@ -131,12 +131,12 @@
     <ClInclude Include="TAhashset.h" />
     <ClInclude Include="TAlist.h" />
     <ClInclude Include="TAmap.h" />
-    <ClInclude Include="TAmempool.h" />
+    <ClInclude Include="mempool.h" />
     <ClInclude Include="TAqueue.h" />
     <ClInclude Include="TAset.h" />
-    <ClInclude Include="TAspeedometer.h" />
+    <ClInclude Include="timer.h" />
     <ClInclude Include="TAstack.h" />
-    <ClInclude Include="TAstring.h" />
+    <ClInclude Include="string.h" />
     <ClInclude Include="TAvector.h" />
   </ItemGroup>
   <ItemGroup>
