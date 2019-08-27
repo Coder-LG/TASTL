@@ -25,7 +25,7 @@ private:
 	}
 
 	static void* refill(size_t n) {
-		int nodenum = 20;
+		size_t nodenum = 20;
 		char* chunk = chunkalloc(n, nodenum);
 		if (nodenum == 1) {
 			return chunk;
@@ -63,7 +63,7 @@ private:
 		return (listnode*)chunk;
 	}
 
-	static char* chunkalloc(size_t nodesize, int& nodenum) {
+	static char* chunkalloc(size_t nodesize, size_t& nodenum) {
 
 		size_t total_bytes = nodesize * nodenum;
 		size_t bytes_left = end_free-start_free;
