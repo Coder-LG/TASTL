@@ -41,6 +41,10 @@
       <Filter>container</Filter>
     </ClInclude>
     <ClInclude Include="timer.h" />
+    <ClInclude Include="auto_ptr.h" />
+    <ClInclude Include="iterator.h">
+      <Filter>iterator</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />

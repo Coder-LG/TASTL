@@ -124,8 +124,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="auto_ptr.h" />
     <ClInclude Include="deque.h" />
     <ClInclude Include="hashtable.h" />
+    <ClInclude Include="iterator.h" />
     <ClInclude Include="rbtree.h" />
     <ClInclude Include="TAhashmap.h" />
     <ClInclude Include="TAhashset.h" />

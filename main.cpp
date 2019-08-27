@@ -28,9 +28,6 @@ void mempooltest() {
 	cout << endl << t / 10;
 }
 
-
-
-
 int main() {
 	mempooltest();
 
