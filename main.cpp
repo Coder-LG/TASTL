@@ -3,6 +3,7 @@
 #include "TAmempool.h"
 using namespace std;
 
+
 void mempooltest() {
 	TAmempool pool;
 	int** x;
