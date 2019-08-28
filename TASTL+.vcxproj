@@ -131,7 +131,7 @@
     <ClInclude Include="rbtree.h" />
     <ClInclude Include="TAhashmap.h" />
     <ClInclude Include="TAhashset.h" />
-    <ClInclude Include="TAlist.h" />
+    <ClInclude Include="list.h" />
     <ClInclude Include="TAmap.h" />
     <ClInclude Include="mempool.h" />
     <ClInclude Include="TAqueue.h" />
@@ -139,7 +139,7 @@
     <ClInclude Include="timer.h" />
     <ClInclude Include="TAstack.h" />
     <ClInclude Include="string.h" />
-    <ClInclude Include="TAvector.h" />
+    <ClInclude Include="vector.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />

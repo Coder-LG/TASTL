@@ -1,17 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClInclude Include="TAvector.h">
-      <Filter>container\seq</Filter>
-    </ClInclude>
     <ClInclude Include="TAstack.h">
       <Filter>adapter\container adapter</Filter>
     </ClInclude>
     <ClInclude Include="TAqueue.h">
       <Filter>adapter\container adapter</Filter>
-    </ClInclude>
-    <ClInclude Include="TAlist.h">
-      <Filter>container\seq</Filter>
     </ClInclude>
     <ClInclude Include="deque.h">
       <Filter>container\seq</Filter>
@@ -44,6 +38,12 @@
     <ClInclude Include="auto_ptr.h" />
     <ClInclude Include="iterator.h">
       <Filter>iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="list.h">
+      <Filter>container\seq</Filter>
+    </ClInclude>
+    <ClInclude Include="vector.h">
+      <Filter>container\seq</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
