@@ -1,6 +1,6 @@
 # TASTL
 
-[English](./README_EN.md)
+[简体中文](./README.md)
 # 说明
 * by TriAlley 三巷
 * from 2019.8.25

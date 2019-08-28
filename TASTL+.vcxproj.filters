@@ -92,5 +92,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
+    <None Include="REAMME_EN.md" />
   </ItemGroup>
 </Project>
