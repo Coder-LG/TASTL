@@ -125,6 +125,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="auto_ptr.h" />
+    <ClInclude Include="construct.h" />
     <ClInclude Include="deque.h" />
     <ClInclude Include="hashtable.h" />
     <ClInclude Include="iterator.h" />

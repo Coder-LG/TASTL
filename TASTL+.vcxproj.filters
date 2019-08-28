@@ -44,10 +44,13 @@
       <Filter>container\seq</Filter>
     </ClInclude>
     <ClInclude Include="auto_ptr.h">
-      <Filter>other tools</Filter>
+      <Filter>other_tools</Filter>
     </ClInclude>
     <ClInclude Include="timer.h">
-      <Filter>other tools</Filter>
+      <Filter>other_tools</Filter>
+    </ClInclude>
+    <ClInclude Include="construct.h">
+      <Filter>allocator</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -93,7 +96,7 @@
     <Filter Include="container\link\hash_based">
       <UniqueIdentifier>{9e0f009d-8754-44ab-a12d-fb623a2b438c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="other tools">
+    <Filter Include="other_tools">
       <UniqueIdentifier>{21d614af-58c0-412d-8cb0-0d5aa612a019}</UniqueIdentifier>
     </Filter>
   </ItemGroup>

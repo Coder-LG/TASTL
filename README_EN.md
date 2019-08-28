@@ -1,24 +1,26 @@
-# TASTL
+ï»¿# TASTL
 
-[¼òÌåÖÐÎÄ](https://github.com/Coder-LG/TASTL)
-# ËµÃ÷
-* by TriAlley ÈýÏï
+I would appreciate it if you could translate this project from Chinese to English(or any other languageðŸ˜„.
+
+[ç®€ä½“ä¸­æ–‡](https://github.com/Coder-LG/TASTL)
+# è¯´æ˜Ž
+* by TriAlley ä¸‰å··
 * from 2019.8.25
-* ±¾ÏîÄ¿½«¾¡¿ÉÄÜÔÚ±£Áô STL »ù±¾¹¦ÄÜµÄÇé¿öÏÂ¾«¼ò´úÂë£¬ÒÔ·½±ã´ó¼ÒÑ§Ï°STLÔ´Âë¡£
+* æœ¬é¡¹ç›®å°†å°½å¯èƒ½åœ¨ä¿ç•™ STL åŸºæœ¬åŠŸèƒ½çš„æƒ…å†µä¸‹ç²¾ç®€ä»£ç ï¼Œä»¥æ–¹ä¾¿å¤§å®¶å­¦ä¹ STLæºç ã€‚
 
-# ÏÂÔØÓëÊ¹ÓÃ
+# ä¸‹è½½ä¸Žä½¿ç”¨
 1. git clone https://github.com/Coder-LG/TASTL.git
-2. ´ò¿ª `TASTL.sln`
-3. ´ò¿ªÄ³Ò»°æ±¾
-4. ½øÐÐµ÷ÊÔ
+2. æ‰“å¼€ `TASTL.sln`
+3. æ‰“å¼€æŸä¸€ç‰ˆæœ¬
+4. è¿›è¡Œè°ƒè¯•
 
-# °æ±¾ËµÃ÷
-* 0.1 Íê³ÉÁËÄÚ´æ³Ø¡¢µü´úÆ÷»ùÀà¡¢ÖÇÄÜÖ¸Õë
-* Î´Íê´ýÐø
+# ç‰ˆæœ¬è¯´æ˜Ž
+* 0.1 å®Œæˆäº†å†…å­˜æ± ã€è¿­ä»£å™¨åŸºç±»ã€æ™ºèƒ½æŒ‡é’ˆ
+* æœªå®Œå¾…ç»­
 
-# ×îÐÂ°æ±¾ `0.1` µÄÇé¿ö
-1. ×ÜÌå¿ò¼Ü
-2. ÄÚ´æ³Ø `mempool.h`
-3. ÖÇÄÜÖ¸Õë `auto_ptr.h`
-4. ¼ÆÊ±Æ÷ `timer.h`
-5. µü´úÆ÷»ùÀà `iterator.h`
+# æœ€æ–°ç‰ˆæœ¬ `0.1` çš„æƒ…å†µ
+1. æ€»ä½“æ¡†æž¶
+2. å†…å­˜æ±  `mempool.h`
+3. æ™ºèƒ½æŒ‡é’ˆ `auto_ptr.h`
+4. è®¡æ—¶å™¨ `timer.h`
+5. è¿­ä»£å™¨åŸºç±» `iterator.h`

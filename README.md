@@ -1,7 +1,7 @@
 # TASTL
 
 [English](./README_EN.md)
-# 说明
+# 项目说明
 * by TriAlley 三巷
 * from 2019.8.25
 * 本项目将尽可能在保留 STL 基本功能的情况下精简代码，以方便大家学习STL源码
@@ -23,3 +23,7 @@
 3. 智能指针 `auto_ptr.h`
 4. 计时器 `timer.h`
 5. 迭代器基类 `iterator.h`
+
+# 代码规范
+1. 双下换线 `__` 开头表示 `STL标准` 中未规定该特性
+2. 

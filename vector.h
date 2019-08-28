@@ -21,11 +21,26 @@ namespace TA {
 		vector():start(0),finish(0),end_of_storage(0){}
 		~vector() { deallocate(); }
 
+
+		reference front() { return *begin(); }
+		reference back() { return *(begin()-1); }
+		void push_back() {
+			if (finish != end_of_storage) {
+				//TODO:
+				
+
+
+			}
+		}
+		void pop_back() {
+			destroy(--finish);//????///
+		}
 	protected:
 		typedef mempool data_allocator;
 		iterator start;
 		iterator finish;
 		iterator end_of_storage;
+		
 
 		void insert_aux(iterator position,const T& x) {
 		}
