@@ -146,7 +146,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
-    <None Include="REAMME_EN.md" />
+    <None Include="README_EN.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

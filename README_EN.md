@@ -1,11 +1,10 @@
 # TASTL
 
-[简体中文](./README.md)
+[简体中文](https://github.com/Coder-LG/TASTL)
 # 说明
 * by TriAlley 三巷
 * from 2019.8.25
-* this project ....
-本项目将尽可能在保留 STL 基本功能的情况下精简代码，以方便大家学习STL源码。
+* 本项目将尽可能在保留 STL 基本功能的情况下精简代码，以方便大家学习STL源码。
 
 
 # 下载与使用
