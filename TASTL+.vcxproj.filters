@@ -90,4 +90,7 @@
       <UniqueIdentifier>{9e0f009d-8754-44ab-a12d-fb623a2b438c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
+  </ItemGroup>
 </Project>
