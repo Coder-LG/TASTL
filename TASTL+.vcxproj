@@ -124,20 +124,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="auto_ptr.h" />
     <ClInclude Include="deque.h" />
     <ClInclude Include="hashtable.h" />
+    <ClInclude Include="iterator.h" />
     <ClInclude Include="rbtree.h" />
     <ClInclude Include="TAhashmap.h" />
     <ClInclude Include="TAhashset.h" />
-    <ClInclude Include="TAlist.h" />
+    <ClInclude Include="list.h" />
     <ClInclude Include="TAmap.h" />
-    <ClInclude Include="TAmempool.h" />
+    <ClInclude Include="mempool.h" />
     <ClInclude Include="TAqueue.h" />
     <ClInclude Include="TAset.h" />
-    <ClInclude Include="TAspeedometer.h" />
+    <ClInclude Include="timer.h" />
     <ClInclude Include="TAstack.h" />
-    <ClInclude Include="TAstring.h" />
-    <ClInclude Include="TAvector.h" />
+    <ClInclude Include="string.h" />
+    <ClInclude Include="vector.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
