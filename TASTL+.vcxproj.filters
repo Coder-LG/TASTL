@@ -52,6 +52,9 @@
     <ClInclude Include="construct.h">
       <Filter>allocator</Filter>
     </ClInclude>
+    <ClInclude Include="type_traits.h">
+      <Filter>other_tools</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />

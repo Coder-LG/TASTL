@@ -140,6 +140,7 @@
     <ClInclude Include="timer.h" />
     <ClInclude Include="TAstack.h" />
     <ClInclude Include="string.h" />
+    <ClInclude Include="type_traits.h" />
     <ClInclude Include="vector.h" />
   </ItemGroup>
   <ItemGroup>
