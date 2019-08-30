@@ -1,6 +1,7 @@
 #pragma once
 #include"mempool.h"
 #include"iterator.h"
+#include"construct.h"
 namespace TA {
 	template<class T >
 	class vector {
@@ -19,7 +20,10 @@ namespace TA {
 		reference operator[](size_type n)const{return *(begin()+n) }
 
 		vector():start(0),finish(0),end_of_storage(0){}
-		~vector() { deallocate(); }
+		~vector() {
+			destroy(begin(), end());
+			deallocate();
+		}
 
 
 		reference front() { return *begin(); }

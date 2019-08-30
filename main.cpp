@@ -1,6 +1,8 @@
-﻿#include<iostream>
+﻿#define DEBUG
+#include<iostream>
 #include"timer.h"
 #include "mempool.h"
+#include"construct.h"
 using namespace std;
 using namespace TA;
 void mempooltest() {
@@ -28,8 +30,20 @@ void mempooltest() {
 	cout << endl << t / 10;
 }
 
-int main() {
-	mempooltest();
+void constructtest() {
+	int* a=new int[10];
+	for (int i = 0; i < 10; i++) {
+		construct(&a[i],i);
+		cout << a[i]<<endl;
+	}
+	destroy(&a[0], &a[9]);
+	for (int i = 0; i < 10; i++) {
+		cout << a[i] << endl;
+	}
 
+}
+int main() {
+	//mempooltest();
+	constructtest();
 	return 0;
 }

@@ -118,9 +118,9 @@ namespace TA {
 
 	//自适应的调用advance函数
 	template<class InputIterator, class Distance>
-	inline void advance(InputIterator& iter, Distance n)
+	inline void advance(InputIterator& i, Distance n)
 	{
-		_advance(i, n, iterator_catetory(iter));
+		_advance(i, n, iterator_catetory(i));
 	}
 	/*从上面的代码中不难发现，实现一个迭代器。须要做一下工作：
 	1.定义5类迭代器的标志类，该标志类用于实现函数的差别调用（即重载），比如求两迭代器距离函数distance(iter1, iter2, tag)。移动函数advance(iter, n, tag)。
