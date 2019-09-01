@@ -1,6 +1,8 @@
 ﻿#pragma once
 #include<cstdlib>
-
+#include<iostream>
+using std::cout;
+using std::endl;
 namespace TA {
 	class mempool {
 	private:
@@ -94,6 +96,10 @@ namespace TA {
 
 				//从系统申请新的内存
 				start_free = (char*)malloc(bytes_to_get);
+#ifdef DEBUG
+				cout << "一次系统内存申请：" << bytes_to_get <<" "<<&start_free << endl;
+#endif // DEBUG
+
 				end_free = start_free + bytes_to_get;
 				heap_size += bytes_to_get;
 
@@ -105,29 +111,56 @@ namespace TA {
 
 	public:
 		static void* allocate(size_t n) {
+#ifdef DEBUG
+			cout << "一次TA内存申请："<<n<<endl;
+#endif // DEBUG
+
 			listnode* volatile* listhead;
 			listnode* result;
 
+
 			if (n > (size_t)MAXSIZE) {
-				return malloc(n);
+				result = (listnode*)malloc(n);
+#ifdef DEBUG
+				cout << "--------大批量一次系统内存申请：" << result << endl;
+#endif // DEBUG
+#ifdef DEBUG
+				cout << "    返回指针：" << result << endl;
+#endif // DEBUG
+				return result;
 			}
 			listhead = listheadarr + getlistindex(n);
 			result = *listhead;
 			if (result == 0) {//? where the 0 come from?
-				return refill(round_up(n));
+				result = (listnode*)refill(round_up(n));
+#ifdef DEBUG
+				cout << "    返回指针：" << result << endl;
+#endif // DEBUG
+				return result;
 			}
 			*listhead = result->next;
+#ifdef DEBUG
+			cout << "    返回指针：" << result << endl;
+#endif // DEBUG
 			return result;
 		}
 
-		static void deallocate(void* p, size_t n) {
+		static int deallocate(void* p, size_t n) {
+#ifdef DEBUG
+			cout << "一次TA内存释放：" << n << endl;
+			cout << "    收到指针：" << p << endl;
+#endif // DEBUG
 			listnode* q = (listnode*)p;
 			listnode* volatile* listhead;
 
 			if (n > (size_t)MAXSIZE) {
+#ifdef DEBUG
+				cout << "    ----------一次大批量系统内存释放：" << p << endl;
+#endif // DEBUG
 				free(p);//为了不与本类中的free冲突
-				return;
 
+
+				return 0;
 			}
 
 			listhead = listheadarr + getlistindex(n);
@@ -135,7 +168,14 @@ namespace TA {
 			q->next = *listhead;
 			*listhead = q;
 		}
-	};
+	
+		static void memcpy(char* ito, char* ifrom, size_t isize) {
+			size_t size = isize;
+			for (int i = 0; i < isize; i++) {
+				ito[i] = ifrom[i];
+			}
+		}
+};
 
 	mempool::listnode* volatile mempool::listheadarr[LISTLEN] = { 0 };
 	char* mempool::end_free = 0;

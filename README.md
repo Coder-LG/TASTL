@@ -6,11 +6,12 @@
 * from 2019.8.25
 * 本项目将尽可能在保留 STL 基本功能的情况下精简代码，以方便大家学习STL源码
 * 建议使用visual studio 2019+进行开发
+* 所有容器使用左闭右开模式 `[,)]`
 
 # 下载与使用
 1. git clone https://github.com/Coder-LG/TASTL.git
 2. 打开 `TASTL.sln`
-3. 打开某一版本
+3. 进入某一分支
 4. 进行调试
 
 # 版本说明
