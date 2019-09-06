@@ -4,6 +4,9 @@
 #include"timer.h"
 #include "mempool.h"
 #include"construct.h"
+#include"lock.h"
+#include<thread>
+#include<Windows.h>
 using namespace std;
 using namespace TA;
 void mempooltest() {
@@ -57,10 +60,6 @@ void constructtest() {
 		construct(&a[i],i);
 		cout << a[i]<<endl;
 	}
-	//destroy(&a[0], &a[9]);
-	//for (int i = 0; i < 10; i++) {
-	//	cout << a[i] << endl;
-	//}
 	int* b = new int[10];
 }
 
@@ -73,9 +72,37 @@ void vectortest() {
 		cout<<v[i]<<endl;
 	}
 }
+
+mutex lk;
+bool volatile start=false;
+int v = 0;
+void func(int id) {
+	while (!start) {
+
+	}
+	for (int i = 0; i < 10; i++) {
+		lk.lock();
+		++v;
+		//cout << id << " " << v << endl;
+		lk.unlock();
+	}
+}
+void locktest() {
+	thread t[1000];
+	for (int i = 0; i <1000; i++) {
+		t[i]=thread(func, i);
+	}
+
+	start = true;
+	for (int i = 0; i <1000; i++) {
+		t[i].join();
+	}
+	cout << v;
+}
 int main() {
 	//mempooltest();
 	//constructtest();
-	vectortest();
+	//vectortest();
+	//locktest();
 	return 0;
 }

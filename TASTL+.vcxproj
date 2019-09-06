@@ -23,7 +23,7 @@
     <ProjectGuid>{84FA6A56-2F9F-4020-90A7-AE138A656887}</ProjectGuid>
     <RootNamespace>TASTL</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>TASTL+</ProjectName>
+    <ProjectName>TASTL</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -129,16 +129,17 @@
     <ClInclude Include="deque.h" />
     <ClInclude Include="hashtable.h" />
     <ClInclude Include="iterator.h" />
+    <ClInclude Include="mutex.h" />
     <ClInclude Include="rbtree.h" />
     <ClInclude Include="TAhashmap.h" />
     <ClInclude Include="TAhashset.h" />
     <ClInclude Include="list.h" />
     <ClInclude Include="TAmap.h" />
     <ClInclude Include="mempool.h" />
-    <ClInclude Include="TAqueue.h" />
+    <ClInclude Include="queue.h" />
     <ClInclude Include="TAset.h" />
     <ClInclude Include="timer.h" />
-    <ClInclude Include="TAstack.h" />
+    <ClInclude Include="stack.h" />
     <ClInclude Include="string.h" />
     <ClInclude Include="type_traits.h" />
     <ClInclude Include="vector.h" />
