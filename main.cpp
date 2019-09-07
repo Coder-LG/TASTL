@@ -2,11 +2,12 @@
 #include<iostream>
 #include"vector.h"
 #include"timer.h"
-#include "mempool.h"
+#include"mempool.h"
 #include"construct.h"
-#include"lock.h"
-#include<thread>
+#include"mutex.h"
 #include<Windows.h>
+#include<thread>
+#include"deque.h"
 using namespace std;
 using namespace TA;
 void mempooltest() {
@@ -77,32 +78,49 @@ mutex lk;
 bool volatile start=false;
 int v = 0;
 void func(int id) {
-	while (!start) {
-
-	}
-	for (int i = 0; i < 10; i++) {
+	while (!start) {}
+	for (int i = 0; i < 5; i++) {
 		lk.lock();
 		++v;
-		//cout << id << " " << v << endl;
+		cout << id <<" -> "<< v<< endl;
 		lk.unlock();
+		Sleep(1000);
 	}
 }
 void locktest() {
 	thread t[1000];
-	for (int i = 0; i <1000; i++) {
+	for (int i = 0; i <5; i++) {
 		t[i]=thread(func, i);
 	}
-
-	start = true;
-	for (int i = 0; i <1000; i++) {
-		t[i].join();
+	for (int i = 0; i < 5; i++) {
+		t[i].detach();
 	}
+
+	Sleep(1000);
+	start = true;
+
+	Sleep(10000);
+
 	cout << v;
+}
+
+void dequetest() {
+	deque<int> d;
+	for (int i = 0; i < 10;i++) {
+		d.push_back(i);
+	}
+	for (int i = 0; i < 10; i++) {
+		d.push_front(i);
+	}
+	for (int i = 0; i < 18; i++) {
+		cout << d.pop_back()<<endl;
+	}
 }
 int main() {
 	//mempooltest();
 	//constructtest();
 	//vectortest();
 	//locktest();
+	dequetest();
 	return 0;
 }

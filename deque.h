@@ -1,41 +1,82 @@
 #pragma once
+#include"iterator.h"
 #include"mempool.h"
 namespace TA {
+	struct __deque_iterator/*: public iterator<T> */{
+
+	};
 	template<class T>
 	class deque {
 	public:
 		typedef T value_type;
-		typedef value_type* iterator;
+		typedef __deque_iterator* iterator;
 		typedef value_type* pointer;
 		typedef value_type& reference;
 		typedef size_t size_type;
 		typedef ptrdiff_t difference_type;
-	protected:
-		typedef pointer* map_pointer;
-		map_pointer map;
-		size_type map_size;
 	private:
 		typedef mempool data_allocator;
-
-
+		typedef struct node {
+			node* next;
+			node* pre;
+			T data;
+		}node;
+		node* head;
+		node* end;
+		size_type num;
 
 	public:
 
 		deque() {
-
+			num = 0;
+			//end = new node;
+			end = (node*)data_allocator::allocate(sizeof(node));
+			end->next = nullptr;
+			end->pre = nullptr;
+			head = end;
 		}
 		~deque() {
+			node* temp = head;
+			while (temp->next != nullptr) {
+				temp = temp->next;
+				destroy(temp->pre);
+				data_allocator::deallocate(temp->pre, sizeof(node));
+				temp->pre = nullptr;
+			}
+			destroy(temp);
 
 		}
 		void push_front(const T& x) {
-
+			num++;
+			head->pre = (node*)data_allocator::allocate(sizeof(node));
+			head->pre->data = x;
+			head->pre->next = head;
+			head->pre->pre = nullptr;
+			head = head->pre;
 		}
 		void push_back(const T& x) {
-
+			num++;
+			end->data = x;
+			end->next = (node*)data_allocator::allocate(sizeof(node));
+			end->next->pre = end;
+			end->next->next = nullptr;
+			end = end->next;
 		}
-		void pop_front() {
+		T& pop_front() {
+			num--;
+			T temp = head->data;
+			head = head->next;
+			data_allocator::deallocate(head->pre, sizeof(node));
+			head->pre = nullptr;
+			return temp;
 		}
-		void pop_back() {
+		T& pop_back() {
+			num--;
+			T temp = end->pre->data;
+			end = end->pre;
+			data_allocator::deallocate(end->next, sizeof(node));
+			end->next = nullptr;
+			return temp;
 		}
 		iterator insert_before(iterator it, const T& x) {
 
@@ -43,96 +84,9 @@ namespace TA {
 		void erase(iterator it) {
 
 		}
-		void clear() {
-
-		}
-		bool empty() const{}
-		int size() {
-
-		}
-		int max_size() {
-
-		}
+		bool empty() const { return num == 0; }
+		size_type size() { return num; }
 	};
 
-	template<class T,class Ref,class Ptr,size_t BufSiz>
-	struct __deque_iterator {
-		typedef __deque_iterator<T, T&, T*, BufSiz> iterator;
-		typedef __deque_iterator<T, const T&,const T*, BufSiz> iterator;
 
-		static size_t buffer_size() {
-			size_t n = BufSiz;
-			size_t sz = sizeof(T);
-			return n != 0 ?
-				n : 
-				(sz < 512 ?
-					size_t(512 / sz) : 
-					size_t(1));
-		}
-
-		typedef T value_type;
-		typedef Ptr pointer;
-		typedef Ref reference;
-		typedef size_t;
-		typedef size_t size_type;
-		typedef ptrdiff_t difference_type;
-		typedef T** map_pointer;
-
-		typedef __deque_iterator self;
-
-		T* cur;
-		T* first;
-		map_pointer node;
-
-		void set_node(map_pointer new_node) {
-			node = new_node;
-			first = *new_node;
-			last = first + difference_type(buffer_size());
-		}
-
-		reference operator*() const { return *cur }
-		pointer operator&()const { return cur }
-		difference_type operator-(const self& x)const{//???
-			return
-				difference_type(buffer_size()) * (node - x.node - 1)
-				+ (cur - first)
-				+ (x.last - x.cur);
-		}
-		self& operator++() {
-			++cur;
-			if (cur == last) {
-				set_node(node + 1);
-				cur = first;
-			}
-			return *this;
-		}
-		self operator++(int) {
-			self tmp = *this;
-			--*this;
-			return tmp;
-		}
-		self& operator--() {
-			--cur;
-			if (cur == last) {
-				set_node(node 1 1);
-				cur = first;
-			}
-			return *this;
-		}
-		self operator++(int) {
-			self tmp = *this;
-			--*this;
-			return tmp;
-		}
-
-		self& operator+=(difference_type n) {
-			difference_type offset = n + (curfirst);
-			if (offset >= 0 && offset < difference_type(buffer_size())) {
-
-			}
-		}
-
-
-
-	};
 }
