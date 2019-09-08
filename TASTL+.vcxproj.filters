@@ -61,9 +61,6 @@
     <ClInclude Include="threadpool.h">
       <Filter>allocator</Filter>
     </ClInclude>
-    <ClInclude Include="thread.h">
-      <Filter>other_tools</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />

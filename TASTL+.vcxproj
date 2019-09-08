@@ -138,7 +138,6 @@
     <ClInclude Include="mempool.h" />
     <ClInclude Include="queue.h" />
     <ClInclude Include="TAset.h" />
-    <ClInclude Include="thread.h" />
     <ClInclude Include="threadpool.h" />
     <ClInclude Include="timer.h" />
     <ClInclude Include="stack.h" />
